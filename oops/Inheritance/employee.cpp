@@ -12,29 +12,42 @@ using namespace std;
 // Base class
 class Employee
 {
-    int id;
+   
 
     public:
     float salary;
-
+    int id;
     Employee(int inpId)
     {
       id=inpId;
       salary=34.00;  
     }
+    Employee(){}
 
 };
 
 // Derived class
 
-//class 
+class Programer : Employee
+{
+  public:
+  int languageCode=9;
+
+  Programer(int inpid)
+  {
+    id=inpid;
+  }
+ 
+};
 
  
 int main()
 {
  Employee vedant(1),harsh(2);
- cout<<vedant.salary;
- cout<<harsh.salary;
+ cout<<vedant.salary<<endl;
+ cout<<harsh.salary<<endl;
+
+ Programer SkillV(5);
  
 return 0;
 }
